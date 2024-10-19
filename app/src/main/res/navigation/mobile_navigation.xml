@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.nick.calcmaster.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.nick.calcmaster.ui.slideshow.SlideshowFragment"
+        android:label="Scientific Calc"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/nav_SSYCalc"
+        android:name="com.nick.calcmaster.ui.SSYCalc.SSYCalcFragment"
+        android:label="SSY Calc"
+        tools:layout="@layout/fragment_s_s_y_calc" />
+    <fragment
+        android:id="@+id/nav_AgeCalc"
+        android:name="com.nick.calcmaster.ui.AgeCalc.AgeCalcFragment"
+        android:label="Age Calculator"
+        tools:layout="@layout/fragment_age_calc" />
+    <fragment
+        android:id="@+id/nav_AreaCalc"
+        android:name="com.nick.calcmaster.ui.AreaCalc.AreaCalcFragment"
+        android:label="Area Calculator"
+        tools:layout="@layout/fragment_area_calc" />
+    <fragment
+        android:id="@+id/nav_SimpleIntrest"
+        android:name="com.nick.calcmaster.ui.SimpleIntrest.SimpleIntrestFragment"
+        android:label="simple interest"
+        tools:layout="@layout/fragment_simple_intrest" />
+    <fragment
+        android:id="@+id/nav_HDFCCalc"
+        android:name="com.nick.calcmaster.ui.HDFS.HDFCFragment"
+        android:label="simple interest"
+        tools:layout="@layout/fragment_h_d_f_c" />
+    <fragment
+        android:id="@+id/nav_CompoundIntrest"
+        android:name="com.nick.calcmaster.ui.CompoundIntrest.CompoundIntrestFragment"
+        android:label="compound interest"
+        tools:layout="@layout/fragment_compound_intrest" />
+
+    <fragment
+        android:id="@+id/nav_BMICalc"
+        android:name="com.nick.calcmaster.ui.BMICalc.BMICalcragment"
+        android:label="BMICalcragment"
+        tools:layout="@layout/fragment_b_m_i_calcragment" />
+    <fragment
+        android:id="@+id/nav_ElectricityBill"
+        android:name="com.nick.calcmaster.ui.ElectricityBill.ElectricityBillFragment"
+        android:label="Electricity Bill"
+        tools:layout="@layout/fragment_electricity_bill" />
+    <fragment
+        android:id="@+id/nav_RootCalc"
+        android:name="com.nick.calcmaster.ui.RootCalc.RootCalcFragment"
+        android:label="Root Calc"
+        tools:layout="@layout/fragment_root_calc" />
+    <fragment
+        android:id="@+id/nav_SppedCalc"
+        android:name="com.nick.calcmaster.ui.SpeedCalc.SppedCalcFragment"
+        android:label="Root Calc"
+        tools:layout="@layout/fragment_spped_calc" />
+
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.nick.calcmaster.ui.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+    <fragment
+        android:id="@+id/nav_Demo"
+        android:name="com.nick.calcmaster.ui.Demo.DemoFragment"
+        android:label="Matrix Calculation"
+        tools:layout="@layout/fragment_gallery" />
+    <fragment
+        android:id="@+id/nav_PyGTh"
+        android:name="com.nick.calcmaster.ui.PyGTh.PyGThFragment"
+        android:label="Matrix Calculation"
+        tools:layout="@layout/fragment_py_g_th" />
+
+</navigation>

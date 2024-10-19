@@ -1,0 +1,137 @@
+<ScrollView
+    android:layout_width="fill_parent"
+    android:orientation="horizontal"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnCount="2"
+        >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Matrix:A"
+        android:textSize="29sp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Matrix:B"
+        android:textSize="29sp"
+        android:layout_marginLeft="100sp"
+        />
+    </GridLayout>
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnCount="2"
+        >
+
+    <EditText
+        android:id="@+id/inputA11"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Matrix A [1][1]" />
+        <EditText
+            android:id="@+id/inputB11"
+            android:layout_width="125dp"
+            android:layout_marginLeft="75dp"
+            android:inputType="number"
+            android:layout_height="wrap_content"
+            android:hint="Matrix B [1][1]" />
+
+        <EditText
+            android:id="@+id/inputA12"
+            android:layout_width="125dp"
+            android:inputType="number"
+            android:layout_height="wrap_content"
+            android:hint="Matrix A [1][2]" />
+
+        <EditText
+            android:id="@+id/inputB21"
+            android:layout_width="125dp"
+            android:inputType="number"
+            android:layout_marginLeft="75dp"
+            android:layout_height="wrap_content"
+            android:hint="Matrix B [2][1]" />
+
+    <EditText
+        android:id="@+id/inputA21"
+        android:layout_width="125dp"
+        android:inputType="number"
+        android:layout_height="wrap_content"
+        android:hint="Matrix A [2][1]" />
+
+        <EditText
+            android:id="@+id/inputB12"
+            android:inputType="number"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="75dp"
+            android:hint="Matrix B [1][2]" />
+
+
+    <EditText
+        android:id="@+id/inputA22"
+        android:inputType="number"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:hint="Matrix A [2][2]" />
+
+
+
+
+
+
+
+
+    <EditText
+        android:id="@+id/inputB22"
+        android:layout_width="125dp"
+        android:inputType="number"
+        android:layout_marginLeft="75dp"
+        android:layout_height="wrap_content"
+        android:hint="Matrix B [2][2]" />
+
+
+    </GridLayout>
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:text="Calculate" />
+    <androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:backgroundTint="#59F6F6"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+            <TextView
+                android:id="@+id/resultTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
+</ScrollView>

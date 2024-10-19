@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home"
+            android:title="@string/menu_home" />
+
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/img_4"
+            android:title="Scientific Calc " />
+        <item
+            android:id="@+id/nav_SSYCalc"
+            android:icon="@drawable/img_9"
+            android:title="SSY Calc" />
+        <item
+            android:id="@+id/nav_HDFCCalc"
+            android:icon="@drawable/img_17"
+            android:title="HDFC EMI" />
+        <item
+            android:id="@+id/nav_AgeCalc"
+            android:icon="@drawable/img_7"
+            android:title="Age Calc" />
+        <item
+            android:id="@+id/nav_BMICalc"
+            android:icon="@drawable/img_3"
+            android:title="BMI Calc" />
+        <item
+            android:id="@+id/nav_SimpleIntrest"
+            android:icon="@drawable/img_10"
+            android:title="SimpleIntrest" />
+        <item
+            android:id="@+id/nav_CompoundIntrest"
+            android:icon="@drawable/img_11"
+            android:title="Compound Intrest" />
+        <item
+            android:id="@+id/nav_AreaCalc"
+            android:icon="@drawable/img_5"
+            android:title="Area Calc" />
+        <item
+            android:id="@+id/nav_ElectricityBill"
+            android:icon="@drawable/img_6"
+            android:title="Electricity Bill" />
+        <item
+            android:id="@+id/nav_RootCalc"
+            android:icon="@drawable/img_57"
+            android:title="Root Calc" />
+        <item
+            android:id="@+id/nav_PyGTh"
+            android:icon="@drawable/img_13"
+            android:title="Hypotenous Calc" />
+
+    </group>
+</menu>

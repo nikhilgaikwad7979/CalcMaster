@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "144005276657",
+    "project_id": "nick-7979",
+    "storage_bucket": "nick-7979.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:144005276657:android:975ea7d514b8953b0b5a50",
+        "android_client_info": {
+          "package_name": "com.nick.calcmaster"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaO0C4y1i3kaeEHpIWHfOSHEIffgFQYJY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

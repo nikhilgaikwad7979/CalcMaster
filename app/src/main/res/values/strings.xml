@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">CalcMaster</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="app_name1">Simple_Notes_Application_Java</string>
+    <string name="application_heading">Simple Notes Application by Nick</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Matrix Calculation</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_AgeCalc">Age Calc</string>
+    <string name="menu_ElectricityBill">Electricity Bill</string>
+    <string name="menu_AreaCalc">Area Calc</string>
+    <string name="menu_BMICalc">BMI Calc</string>
+    <string name="menu_RootCalc">Root Calc</string>
+    <string name="menu_SpeedCalc">Speed Calc</string>
+    <string name="menu_SSyCalc">SSY Calc</string>
+    <string name="menu_simpleintrest">Simple Interest</string>
+    <string name="menu_CompoundIntrest">Compound Interest</string>
+    <string name="menu_demo">Demo</string>
+    <string name="pythagoras_theorm">Pythagoras Theorm</string>
+</resources>
