@@ -51,7 +51,6 @@
             android:text="6"
             style="@style/CalculatorButton"/>
 
-
         <!-- Row 2 -->
         <Button
             android:id="@+id/buttonSubtract"
@@ -71,12 +70,10 @@
             android:text="/"
             style="@style/CalculatorButton"/>
 
-
         <Button
             android:id="@+id/button3"
             android:text="3"
             style="@style/CalculatorButton"/>
-
 
         <!-- Row 3 -->
         <Button
@@ -87,7 +84,6 @@
             android:id="@+id/buttonMultiply"
             android:text="*"
             style="@style/CalculatorButton"/>
-
 
         <Button
             android:id="@+id/button1"
@@ -105,28 +101,16 @@
         <Button
             android:id="@+id/buttonC"
             android:text="C"
+            android:layout_marginBottom="324dp"
             style="@style/CalculatorButton"/>
 
-        <!-- Row 5 (Scientific Functions) -->
-        <Button
-            android:id="@+id/buttonSin"
-            android:text="sin"
-            style="@style/CalculatorButton"/>
-        <Button
-            android:id="@+id/buttonCos"
-            android:text="cos"
-            style="@style/CalculatorButton"/>
-        <Button
-            android:id="@+id/buttonTan"
-            android:text="tan"
-            android:layout_marginBottom="323sp"
-            style="@style/CalculatorButton"/>
+        <!-- Row 5 (Square Root Function) -->
         <Button
             android:id="@+id/buttonSqrt"
             android:text="√"
-            android:layout_marginBottom="323sp"
+            android:layout_marginBottom="324dp"
             style="@style/CalculatorButton"/>
 
-    </GridLayout>
 
+    </GridLayout>
 </LinearLayout>

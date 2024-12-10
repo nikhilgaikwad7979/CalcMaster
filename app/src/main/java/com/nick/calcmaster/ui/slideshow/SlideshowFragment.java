@@ -7,12 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-
 import com.nick.calcmaster.R;
-
 import java.util.Stack;
 
 public class SlideshowFragment extends Fragment {
@@ -28,12 +25,8 @@ public class SlideshowFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_slideshow, container, false);
-
         resultTextView = view.findViewById(R.id.resultTextView);
-
-        // Initialize buttons
         initializeButtons(view);
-
         return view;
     }
 
@@ -43,8 +36,7 @@ public class SlideshowFragment extends Fragment {
                 R.id.button4, R.id.button5, R.id.button6, R.id.button7,
                 R.id.button8, R.id.button9, R.id.buttonAdd, R.id.buttonSubtract,
                 R.id.buttonMultiply, R.id.buttonDivide, R.id.buttonEquals,
-                R.id.buttonC, R.id.buttonSin, R.id.buttonCos, R.id.buttonTan,
-                R.id.buttonSqrt
+                R.id.buttonC, R.id.buttonSqrt
         };
 
         for (int id : buttonIds) {
@@ -56,14 +48,14 @@ public class SlideshowFragment extends Fragment {
     @SuppressLint("NonConstantResourceId")
     private void onButtonClick(View v) {
         String buttonText = ((Button) v).getText().toString();
+
         if (buttonText.equals("C")) {
             clearInput();
         } else if (buttonText.equals("=")) {
             calculateResult();
         } else {
-            if (buttonText.equals("sin") || buttonText.equals("cos") ||
-                    buttonText.equals("tan") || buttonText.equals("√")) {
-                input.append(buttonText).append("(");
+            if (buttonText.equals("√")) {
+                input.append("√(");
             } else {
                 input.append(buttonText);
             }
@@ -88,31 +80,12 @@ public class SlideshowFragment extends Fragment {
     }
 
     private double evaluateExpression(String expression) {
-        if (expression.contains("sin(") || expression.contains("cos(") || expression.contains("tan(")) {
-            return evaluateTrigonometricFunctions(expression);
-        } else if (expression.startsWith("√")) {
-            String value = expression.substring(1).trim(); // Assuming it's just "√number"
+        if (expression.startsWith("√")) {
+            String value = expression.substring(2, expression.length() - 1).trim(); // Extract number inside √()
             return Math.sqrt(Double.parseDouble(value));
+        } else {
+            return simpleArithmeticEvaluation(expression);
         }
-
-        return simpleArithmeticEvaluation(expression);
-    }
-
-    private double evaluateTrigonometricFunctions(String expression) {
-        double result = 0.0;
-
-        if (expression.contains("sin(")) {
-            String value = expression.substring(expression.indexOf("sin(") + 4, expression.indexOf(")", expression.indexOf("sin(")));
-            result = Math.sin(Math.toRadians(Double.parseDouble(value)));
-        } else if (expression.contains("cos(")) {
-            String value = expression.substring(expression.indexOf("cos(") + 4, expression.indexOf(")", expression.indexOf("cos(")));
-            result = Math.cos(Math.toRadians(Double.parseDouble(value)));
-        } else if (expression.contains("tan(")) {
-            String value = expression.substring(expression.indexOf("tan(") + 4, expression.indexOf(")", expression.indexOf("tan(")));
-            result = Math.tan(Math.toRadians(Double.parseDouble(value)));
-        }
-
-        return result;
     }
 
     private double simpleArithmeticEvaluation(String expression) {
@@ -122,10 +95,8 @@ public class SlideshowFragment extends Fragment {
         for (int i = 0; i < expression.length(); i++) {
             char c = expression.charAt(i);
 
-            // If the character is a whitespace, skip it
             if (c == ' ') continue;
 
-            // If the character is a digit, read the full number
             if (Character.isDigit(c) || c == '.') {
                 StringBuilder number = new StringBuilder();
                 while (i < expression.length() && (Character.isDigit(expression.charAt(i)) || expression.charAt(i) == '.')) {
@@ -134,9 +105,7 @@ public class SlideshowFragment extends Fragment {
                 }
                 i--; // Adjust for the outer loop increment
                 numbers.push(Double.parseDouble(number.toString()));
-            }
-            // If the character is an operator
-            else {
+            } else {
                 while (!operators.isEmpty() && precedence(c) <= precedence(operators.peek())) {
                     numbers.push(applyOperator(operators.pop(), numbers.pop(), numbers.pop()));
                 }
